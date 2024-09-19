@@ -25,18 +25,6 @@ gsap.from(".footer-name span",{
     }
 })
 
-gsap.from(".navbar-head h5",{
-    opacity:1,
-    y:10,
-    // ease: "power1.inOut",
-    stagger:0.1,
-    scrollTrigger:{
-        trigger:".footer",
-        markers:true,
-        toggleActions: "restart pause resume"
-    }
-})
-
 document.querySelectorAll(".card").forEach(card=>{
     gsap.to(card,{
         scale:0.7,
