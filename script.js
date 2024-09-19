@@ -31,7 +31,6 @@ document.querySelectorAll(".card").forEach(card=>{
         opacity:0,
         scrollTrigger:{
             trigger:card,
-            scrub:true,
             start:"top 20%",
             end:"bottom 50%"
         }
