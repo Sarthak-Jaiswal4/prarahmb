@@ -7,6 +7,7 @@
 html,body{
     height: 100%;
     width: 100%;
+    background-color: #fcf6e3;
 }
 .login-btn{
     position: relative;
@@ -55,5 +56,17 @@ a:hover{
     bottom: 35px;
     opacity: 0.2;
 }
-
+/* .heropage{
+    z-index: 2;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+.showcase{
+    z-index: 5;
+    position: absolute;
+} */
+.herpage{
+    transform: rotate(30grad);
+}
 
