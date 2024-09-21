@@ -1,21 +1,30 @@
+@font-face{
+    font-family: myfont;
+    src: url(./macan-regular.woff2) ;
+}
+@font-face {
+    font-family: crazy;
+    src: url(./658433a0cbce340e298ba36d_BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf);
+}
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "myfont";
 }
 html,body{
     height: 100%;
     width: 100%;
-    background-color: #fcf6e3;
+    /* background-color: #f8f1d8; */
+    background-color: white;
 }
 .login-btn{
     position: relative;
-    transition: transform ease-in-out 0.s;
+    transition: transform all ease-in-out 2s;
     cursor: pointer;
     z-index: 1;
     overflow: hidden;
-    color: #fff;
+    color: black;
     background-color: #3eaff0;
 }
 .login-btn::before{
@@ -25,48 +34,174 @@ html,body{
    bottom: 0;
    right: 0;
     position: absolute;
-    transform: translateX(-100%);
+    transform: translatey(100%);
     background-color: rgb(49, 139, 241);
     border-radius: 15px;
-    transition: transform ease-in-out 0.6s;
+    transition: transform ease-in-out 0.3s;
     z-index: -1;
 }
 .login-btn:hover::before{
-    transform: translateX(0%);
+    transform: translatey(0%);
 }
 a:hover{
     color: #fff;
-}
-.nav-obj{
-    transition: all ease-in-out 0.3s;
-}
-.nav-obj:hover{
-    color: #3bb3e2;
-    font-weight: 600;
 }
 .work-img img{
     height: 500px;
     object-fit: cover;
 }
-.footer-name{
-    justify-content: end;
-    align-items: end;
-    position: absolute;
-    left: 80px;
-    bottom: 35px;
-    opacity: 0.2;
+.card{
+    /* background-color: rgb(230, 230, 230); */
+    background: linear-gradient(220.55deg, #FF5E98 0%, #0F213E 100%);
+    color: white;
 }
-/* .heropage{
-    z-index: 2;
-    position: fixed;
-    height: 100%;
+.footer{
+    height: 75vh;
     width: 100%;
+    z-index: 8;
+    background-color: grey;
+    color: white;
+    position: sticky;
+    bottom: -80%;
+}
+.footer-name{
+    height: 100%;
+    margin-inline: auto; 
+    width: fit-content;
+    opacity: 0.4;
+    font-size: 12vw;
+    display: flex ;
+    justify-content: center;
+    align-items: end;
+}
+.footer-name span{
+    color: white;
+    line-height: 4vw;
+    opacity: 0.5;
 }
 .showcase{
-    z-index: 5;
-    position: absolute;
-} */
-.herpage{
-    transform: rotate(30grad);
+    z-index: 9;
+    position: relative;
+    overflow: visible;
+    background-color: black;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+} 
+.wave{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
 }
+.wave img{
+    position: absolute;
+    object-fit: cover;
+    width: 100vw;
+}
+.hero-para{
+    height: 700px;
+    width: 100%;
+}
+.hero-text{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    height: 100px;
+    text-align: center;
+}
+
+
+.page-1{
+    color: #F5EFFF !important;
+    height: 100vh;
+    /* background-color: #B0A0FF; */
+    background: #BAADFA;
+    width: 100%;
+    clip-path:view-box;
+    position: sticky;
+    top: 0%;
+    z-index: 7;
+}
+nav h1{
+    font-size: 1.75vw;
+    font-weight: 600;
+    
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    overflow: hidden;
+}
+.nav-2{
+    display: flex;
+    gap: 5vw;
+    transition: all ease-in-out 0.3s;
+    overflow: hidden;
+    
+    h1{
+        font-weight: 600;
+        font-size: 1.25vw;
+    }
+}
+.nav-2 h1:hover{
+    color: rgb(49, 139, 241);
+    font-weight: 600;
+}
+.center{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.25vw;
+
+    button{
+        margin-top: 35px;
+    }
+}
+.center h1{
+    overflow: hidden;
+    font-size: 5vw;
+    font-weight: 500;
+    line-height: 7vw;
+}
+.rotate h2{
+    line-height: 0;
+    font-size: 4vw;
+    font-weight: 900;
+    text-align: center;
+    font-family: "crazy" !important;
+    color: #5D6FE4;
+}
+
+.page-2{
+    height: 100vh;
+    width: 100%;
+}
+.work-text{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    height: 100%;
+}
+.work-text-2{
+    color: white;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    overflow: hidden;
+    font-size: 9vw;
+   
+
+    span{
+        overflow: hidden;
+        font-weight: 500;
+    }
+}
+
 
