@@ -1,12 +1,7 @@
 const lenis = new Lenis({
-    duration:2,
-    wheelMultiplier:1.7,
+    duration:2.5,
+    wheelMultiplier:1.2,
 })
-
-lenis.on('scroll', (e) => {
-  console.log(e)
-})
-
 function raf(time) {
   lenis.raf(time)
   requestAnimationFrame(raf)
@@ -22,6 +17,7 @@ gsap.from(".footer-name span",{
     scrollTrigger:{
         trigger:".footer",
         start:"top 35%",
+        // markers:true,
         toggleActions: "restart pause resume"
     }
 })
@@ -49,13 +45,22 @@ ft.from(".nav-2 h1,nav h1, .nav-btn ",{
 })
 
 ft.from(text.chars,{
-    y:-100,
+    y:-130,
     stagger:0.05,
     ease: "power1.inOut",
     duration:0.3,
 })
 
-const titles=gsap.utils.toArray("h2")
+ft.fromTo(".img-1,.img-2,.img-3,.img-4",{
+    opacity:0,
+    rotation:5,
+},{
+    opacity:1,
+    rotation:0,
+    stagger:0.05,
+})
+
+const titles=gsap.utils.toArray(".rotate h2")
 const tl=gsap.timeline()
 
 titles.forEach(title=>{
@@ -77,28 +82,5 @@ titles.forEach(title=>{
         delay:1,
     },"<1")
     .repeat(-1)
-})
-
-gsap.to(".page-1",{
-    scale:0.9,
-    opacity:0.6,
-    borderRadius:"40px",
-    scrollTrigger:{
-        trigger:".showcase",
-        start:"top 75%",
-        end:"top 80",
-        // markers:true,
-        scrub:1,
-    }
-})
-
-gsap.from(".our",{
-    y:-100,
-    stagger:0.1,
-    ease: "power1.inOut",
-    scrollTrigger:{
-        trigger:".page-2",
-        start:"top 30%",
-    }
 })
 
